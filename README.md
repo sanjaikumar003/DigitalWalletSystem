@@ -1,66 +1,63 @@
-# 💰 Digital Wallet System
+# 💳 Digital Wallet System
 
-A backend-based Digital Wallet System built using Java and Spring Boot.  
-This application allows users to create wallets and transfer money between accounts with proper validation and exception handling.
+A Spring Boot based Digital Wallet backend system that allows users to:
+
+- Create users
+- Add money to wallet
+- Transfer money between users
+- Check wallet balance
+- Record transactions
+
+---
+
+## 🛠 Tech Stack
+
+- Java 17
+- Spring Boot 3
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Swagger (OpenAPI)
+- Maven
 
 ---
 
 ## 🚀 Features
 
-- Create Wallet Accounts
-- Transfer Money Between Users
-- Prevent Same Account Transactions
-- Insufficient Balance Validation
-- Receiver Not Found Validation
-- Unit Test Cases for Edge Conditions
+- User Creation
+- Wallet Auto Creation
+- Add Money
+- Transfer Money
+- Transaction Recording
+- Validation & Error Handling
+- REST APIs documented using Swagger
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 API Endpoints
 
-- Java
-- Spring Boot
-- Maven
-- JUnit & Mockito (for testing)
+### User
+POST /users
 
----
-
-## 📂 Project Structure
-
-- Controller Layer
-- Service Layer
-- Repository Layer
-- DTO & Entity Classes
-- Exception Handling
-- Unit Tests
+### Wallet
+POST /wallet/add  
+POST /wallet/transfer  
+GET /wallet/{userId}
 
 ---
 
-## 🧪 Test Cases Covered
+## 🧠 Concepts Implemented
 
-✔ Same Sender & Receiver Transaction  
-✔ Low Balance Exception  
-✔ Receiver Not Found  
-✔ Successful Transfer
-
----
-
-## ▶ How to Run
-
-1. Clone the repository
-2. Open in IntelliJ / Eclipse
-3. Run `mvn clean install`
-4. Start the Spring Boot application
+- Layered Architecture (Controller → Service → Repository)
+- DTO Pattern
+- Transaction Management (@Transactional)
+- REST API Design
+- Swagger Documentation
+- Database Relationships
 
 ---
 
-## 📌 Future Improvements
+## ▶ Run Project
 
-- Add JWT Authentication
-- Add Transaction History API
-- Connect to MySQL database
-- Add Swagger Documentation
-
----
-
-👨‍💻 Developed by Sanjai Kumar
+```bash
+./mvnw spring-boot:run

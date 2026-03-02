@@ -5,15 +5,18 @@ import com.sanjai.digitalwalletsystem.entity.User;
 import com.sanjai.digitalwalletsystem.entity.Wallet;
 import com.sanjai.digitalwalletsystem.repository.UserRepository;
 import com.sanjai.digitalwalletsystem.repository.WalletRepository;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class UserService {
 
     private final UserRepository userRepository;
     private final WalletRepository walletRepository;
+    public UserService(UserRepository userRepository,WalletRepository walletRepository){
+        this.userRepository=userRepository;
+        this.walletRepository=walletRepository;
+    }
 
     public User createUser(UserRequestDto request) {
 

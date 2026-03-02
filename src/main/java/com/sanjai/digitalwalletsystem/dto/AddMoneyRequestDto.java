@@ -2,9 +2,9 @@ package com.sanjai.digitalwalletsystem.dto;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
-import lombok.Data;
 
-@Data
+
+
 public class AddMoneyRequestDto {
 
     @NotNull
@@ -13,4 +13,20 @@ public class AddMoneyRequestDto {
     @NotNull
     @Positive
     private Double amount;
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
 }

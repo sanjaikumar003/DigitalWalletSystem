@@ -5,9 +5,6 @@ import lombok.*;
 
 @Entity
 @Table(name = "wallet")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Wallet {
 
     @Id
@@ -23,4 +20,37 @@ public class Wallet {
 
     @Version
     private Long version;
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
+
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

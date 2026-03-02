@@ -12,12 +12,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 @Service
-@RequiredArgsConstructor
+
 public class WalletService {
 
     private final WalletRepository walletRepository;
     private final TransactionRepository transactionRepository;
-
+    public WalletService(WalletRepository walletRepository,TransactionRepository transactionRepository){
+        this.walletRepository=walletRepository;
+        this.transactionRepository=transactionRepository;
+    }
     @Transactional
     public AddMoneyResponseDto addMoney(AddMoneyRequestDto request) {
 

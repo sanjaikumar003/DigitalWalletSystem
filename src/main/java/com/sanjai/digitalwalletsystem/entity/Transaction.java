@@ -7,9 +7,6 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "transactions")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Transaction {
 
     @Id
@@ -25,4 +22,47 @@ public class Transaction {
     private String status;
 
     private LocalDateTime createdAt = LocalDateTime.now();
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setToUser(Long toUser) {
+        this.toUser = toUser;
+    }
+
+    public Long getToUser() {
+        return toUser;
+    }
+
+    public void setFromUser(Long fromUser) {
+        this.fromUser = fromUser;
+    }
+
+    public Long getFromUser() {
+        return fromUser;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

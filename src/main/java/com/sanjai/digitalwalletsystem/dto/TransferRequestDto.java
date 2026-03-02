@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
-@Data
+
 public class TransferRequestDto {
 
 
@@ -17,4 +17,28 @@ public class TransferRequestDto {
     @NotNull
     @Positive
     private Double amount;
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setToUser(Long toUser) {
+        this.toUser = toUser;
+    }
+
+    public Long getToUser() {
+        return toUser;
+    }
+
+    public void setFromUser(Long fromUser) {
+        this.fromUser = fromUser;
+    }
+
+    public Long getFromUser() {
+        return fromUser;
+    }
 }
