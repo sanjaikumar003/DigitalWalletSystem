@@ -1,7 +1,5 @@
 package com.sanjai.digitalwalletsystem.dto;
 
-import lombok.*;
-
 
 public class WalletResponseDto {
 

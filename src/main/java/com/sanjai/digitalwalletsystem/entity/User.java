@@ -1,7 +1,7 @@
 package com.sanjai.digitalwalletsystem.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+
 
 @Entity
 @Table(name = "users")
@@ -16,6 +16,8 @@ public class User {
 
     @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable=false)
+     private String  password;
 
     public void setEmail(String email) {
         this.email = email;
@@ -39,5 +41,12 @@ public class User {
 
     public Long getId() {
         return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

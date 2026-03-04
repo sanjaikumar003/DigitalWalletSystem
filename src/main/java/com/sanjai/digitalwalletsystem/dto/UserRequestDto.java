@@ -13,6 +13,8 @@ public class UserRequestDto {
     @Email
     @NotBlank
     private String email;
+    @NotBlank
+    private String password;
 
     public void setEmail(String email) {
         this.email = email;
@@ -28,5 +30,13 @@ public class UserRequestDto {
 
     public String getName() {
         return name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
